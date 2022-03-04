@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Example</title>
+        <title>Random Number Generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="stylesheet" href="index.css">
     </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
+    <body>     
+        <div class="container">
+            <div class="title">
+                <h1>Random Number Generator</h1>
+            </div>
+            
+            <div class="generated-number"></div>
+
+            <div class="generate-button">
+                <button id="generateBtn">Generate</button>
+            </div>
+
+            <div class="input-list">
+                <ul class="list">
+                    <li>
+                        <input type="number" class="min-number" placeholder="Min">
+                        <input type="number" class="max-number" placeholder="Max">
+                        <button class="removeBtn">-</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="add-button">
+                <button id="addBtn">+</button>
+            </div>
+        </div>
+        <script src="app.js"></script>
     </body>
 </html>
