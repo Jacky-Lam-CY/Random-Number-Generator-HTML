@@ -59,10 +59,6 @@ generateBtn.addEventListener("click", () => {
         const maxValue = inputItems[i].querySelector(".max-number").value;
 
         console.log(minValue, maxValue);
-
-        if(minValue == null || maxValue == null || minValue > maxValue){
-            continue;
-        }
             
         generatedNumbers.push(generateRandomInteger(minValue, maxValue));
         count++;
@@ -70,8 +66,13 @@ generateBtn.addEventListener("click", () => {
 
     var outputList = "";
 
-    generatedNumbers.forEach((e) => {
-        outputList += e + ",";
+    generatedNumbers.forEach((e, i) => {
+        if(i == generatedNumbers.length - 1){
+            outputList += e;
+        }
+        else{
+            outputList += e + ",";
+        }
     });
 
     generatedNumber.textContent = outputList;
